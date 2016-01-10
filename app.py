@@ -50,8 +50,8 @@ class Application(tornado.web.Application):
         ]
 
         settings = {
-            'template_path': 'templates',
-            'static_path': 'static'
+            'template_path': './templates',
+            'static_path': './static'
         }
         tornado.web.Application.__init__(self, handlers, **settings)
         
