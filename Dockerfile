@@ -12,5 +12,5 @@ RUN cd /srv \
 
 EXPOSE 8000
 
-CMD ["python3", "/srv/tornado-websocket-example/app.py"]
+CMD ["python3", "/srv/tornado-websocket-rest-example/app.py"]
 
