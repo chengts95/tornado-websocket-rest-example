@@ -4,7 +4,7 @@ This is a websocket and rest api example written in python.
 
 ## Reference:
 
-  `https://github.com/hiroakis/tornado-websocket-rest-example.git`
+  `https://github.com/hiroakis/tornado-websocket-example`
 
 ## Installation
 

@@ -5,6 +5,9 @@ import tornado.options
 import tornado.websocket
 import json
 
+import os
+
+
 cl = []
 
 class IndexHandler(tornado.web.RequestHandler):
@@ -48,11 +51,18 @@ class Application(tornado.web.Application):
              (r'/ws', SocketHandler),
              (r'/api', ApiHandler),
         ]
+<<<<<<< HEAD
 
         settings = {
             'template_path': './templates',
             'static_path': './static'
         }
+=======
+        settings = dict(
+            template_path=os.path.join(os.path.dirname(__file__), "templates"),
+            static_path=os.path.join(os.path.dirname(__file__), "static"),
+        )
+>>>>>>> refs/remotes/thermalogic/master
         tornado.web.Application.__init__(self, handlers, **settings)
         
         
