@@ -51,25 +51,19 @@ class Application(tornado.web.Application):
              (r'/ws', SocketHandler),
              (r'/api', ApiHandler),
         ]
-<<<<<<< HEAD
 
-        settings = {
-            'template_path': './templates',
-            'static_path': './static'
-        }
-=======
         settings = dict(
             template_path=os.path.join(os.path.dirname(__file__), "templates"),
             static_path=os.path.join(os.path.dirname(__file__), "static"),
         )
->>>>>>> refs/remotes/thermalogic/master
+
         tornado.web.Application.__init__(self, handlers, **settings)
-        
-        
+
+
 if __name__ == '__main__':
 #    app.listen(8888)
 #    ioloop.IOLoop.instance().start()
-    
+
     app = Application()
     server = tornado.httpserver.HTTPServer(app)
     server.listen(8000)
